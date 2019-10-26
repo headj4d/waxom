@@ -591,11 +591,18 @@ header nav ul li a:hover, header nav ul li a.active {
 
 .video .contents h3 {
   margin-top: 40px;
+  font-size: 30px;
+}
+
+.video .contents p {
+  margin: 20px 0 30px 0;
+  line-height: 25px;
 }
 
 .video .contents span {
   color: #C7B299;
 }
+
 
 #overlay {
   position: fixed;
