@@ -58,13 +58,14 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10px;
 }
 
 header {
-  position: fixed;
+  position: absolute;
   z-index: 999;
-  margin-left: 50px;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
 }
 
 .nav li {
@@ -103,6 +104,12 @@ header nav ul li a:hover, header nav ul li a.active {
 /* header end */
 
 /* slider */
+
+.slider {
+  position: relative;
+  /* bottom: 140px; */
+  width: 100%;
+}
 .slider-list li{
   background-repeat: no-repeat;
   background-size: cover;
@@ -234,7 +241,7 @@ header nav ul li a:hover, header nav ul li a.active {
 /* icons  */
 
 .icons-block {
-  margin: 80px 0 80px 0;
+  margin-bottom: 80px;
 }
 
 .first, .second, .third, .fourth {
@@ -271,8 +278,20 @@ header nav ul li a:hover, header nav ul li a.active {
 
 .waxon {
   width: 769px;
-  height: 140px;
+  /* height: 140px; */
   margin: 0 auto;
+}
+
+.waxon h2 {
+  font-size: 30px;
+  padding: 80px 0 22px 0;
+}
+
+.waxon p {
+  color: #8C8C8C;
+  line-height: 30px;
+  padding-bottom: 20px;
+  font-weight: 400;
 }
 
 .web-pages {
@@ -338,7 +357,7 @@ header nav ul li a:hover, header nav ul li a.active {
 /* projects */
 
 .projects {
-  margin-top: 140px;
+  margin: 250px 0 80px 0;
   text-align: center;
 }
 
