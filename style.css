@@ -19,22 +19,8 @@
 
 /* header */
 
-.bckg-1 {
-  position: absolute;
-  z-index: -2;
-  width: 100%;
-  height: calc(120vh - 10px);
-  object-fit: cover;
-}
-
-.lg {
-  width: 63px;
-  position: relative;
-  left: 105px;
-}
-
 .nav {
-  margin-right: 100px;
+  margin-right: 200px;
 }
 
 header h1 {
@@ -54,12 +40,6 @@ body {
   text-decoration: none;
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 header {
   position: absolute;
   z-index: 999;
@@ -68,12 +48,19 @@ header {
   padding: 40px 0;
 }
 
+header nav {
+  float: right;
+}
+
+header nav ul li {
+  float: left;
+}
+
 .nav li {
-  display: inline-block;
-  padding: 0 10px;
+  padding: 10px;
   font-size: 14px;
   font-family: "Arial";
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .nav li a {
@@ -81,16 +68,14 @@ header {
 }
 
 .nav-icons {
-  float: right;
-  color: #fff;
   position: relative;
-  bottom: 20px;
-  left: 10px;
+  color: #fff;
+  margin-top: 25px;
+  left: 60px;
 }
 
 .nav-icons li {
-  display: inline-block;
-  font-size: 24px;
+  font-size: 17px;
 }
 
 .nav-icons li:nth-child(1) {
@@ -101,13 +86,23 @@ header nav ul li a:hover, header nav ul li a.active {
   color: #C7B299;
 }
 
+header .logo a {
+  width: 171px;
+  height: 51px;
+  background: url(images/logo-white.png) no-repeat;
+  display: block;
+}
+
+header .logo {
+  float: left;
+}
+
 /* header end */
 
 /* slider */
 
 .slider {
   position: relative;
-  /* bottom: 140px; */
   width: 100%;
 }
 .slider-list li{
@@ -1080,3 +1075,83 @@ footer p {
   color: #959595;
 }
 /* footer end */
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
+  header {
+    position: static;
+    top: 0;
+    background: #fff;
+    box-shadow: 0 3px 3px rgba(0,0,0,.8);
+    padding: 20px 0 0;
+  }
+
+  .toggle {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+  }
+
+  header .container {
+    padding: 0;
+  }
+
+  header .logo a {
+    background-image: url(images/logo_dark.png);
+  }
+  header .logo  {
+    margin-left: 15px;
+    padding-bottom: 20px;
+  }
+  .nav-icons li:last-child {
+   display: none;
+   }
+
+  .nav-icons {
+   color: #555;
+   position: absolute;
+   top: 10px;
+   left: 500px;
+   z-index: 200;
+   }
+
+   header nav {
+     float: none;
+     background: #111;
+     padding: 0 15px;
+   }
+
+   header .logo {
+     float: none;
+   }
+
+   .nav li {
+     float: none;
+     border-bottom: 1px solid #252525;
+   }
+
+   .nav {
+     display: none;
+   }
+
+   .icons-block {
+     width: 22%;
+     margin-right: 4%;
+   }
+}
+
+@media screen and (max-width: 480px) {
+  /* .icons-block {
+    width: 100%;
+    margin-right: 0;
+  } */
+}
